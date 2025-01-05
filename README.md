@@ -1,8 +1,13 @@
 # team-nup-2025-zenn-ai-hackathon
 
 
-# フロントエンド
+## 構成
+- `backend/`: Python/Flask バックエンドAPI
+- `frontend/`: フロントエンド（実装予定）
+- `docs/`: プロジェクトドキュメント
+
+## フロントエンド
 
 
-# バックエンド
+## バックエンド
 
