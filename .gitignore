@@ -1,0 +1,11 @@
+# Python
+__pycache__/
+.pytest_cache/
+requirements.txt
+
+# Environment
+.env
+.venv
+
+# IDE
+.vscode
