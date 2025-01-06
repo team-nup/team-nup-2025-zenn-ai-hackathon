@@ -2,7 +2,7 @@
 
 
 ## 構成
-- `backend/`: Python/Flask バックエンドAPI
+- `backend/`: Python/Flask /vertexai バックエンドAPI
 - `frontend/`: フロントエンド（実装予定）
 - `docs/`: プロジェクトドキュメント
 
