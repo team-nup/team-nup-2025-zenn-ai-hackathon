@@ -1,11 +1,2 @@
-# Python
-__pycache__/
-.pytest_cache/
-requirements.txt
-
-# Environment
+node_modules/
 .env
-.venv
-
-# IDE
-.vscode
