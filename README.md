@@ -1,11 +1,25 @@
 # team-nup-2025-zenn-ai-hackathon
 
-## 構成
+オンラインでルーレットを回して結果を共有できる Web アプリケーション
 
-- `backend/`: Node.js/express/cloudrun/vertexai
-- `frontend/`: フロントエンド（実装予定）
-- `docs/`: プロジェクトドキュメント
+## デモ
 
-## フロントエンド
+XXX url
 
-## バックエンド
+## 機能
+
+- カスタマイズ可能なルーレット
+- リアルタイムな結果共有
+
+### フロントエンド
+
+- React + Vite
+- Tailwind CSS
+- React Router
+- Lucide Icons
+
+### バックエンド
+
+- Node.js/Express
+- Cloud Run
+- Vertex AI
