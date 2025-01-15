@@ -28,6 +28,7 @@ const RouletteWheel = () => {
     }
   });
 
+  const [previousRotation, setPreviousRotation] = useState(0);
   const [messageInput, setMessageInput] = useState('');
 
   const totalWeight = rouletteState.options.reduce((sum, option) => sum + option.weight, 0);
@@ -38,7 +39,7 @@ const RouletteWheel = () => {
     const spins = 5;
     const baseRotation = 360 * spins;
     
-    // 結果を決定（ランダムな角度から結果を計算）
+    // ランダムな角度を決定
     const randomAngle = Math.random() * 360;
     const normalizedAngle = randomAngle % 360;
     let accumulatedAngle = 0;
@@ -54,20 +55,22 @@ const RouletteWheel = () => {
       accumulatedAngle += sectorAngle;
     }
     
-    // 万が一の場合の対応
     if (!selectedResult) {
       selectedResult = rouletteState.options[rouletteState.options.length - 1];
     }
-  
-    // 回転角度の計算（矢印が上を指すように360度から引く）
-    const finalRotation = baseRotation + (360 - normalizedAngle);
-  
+
+    // 新しい回転角度を計算
+    const finalRotation = previousRotation + baseRotation + (360 - normalizedAngle);
+
     setRouletteState(prev => ({
       ...prev,
       isSpinning: true,
       rotation: finalRotation,
       result: selectedResult
     }));
+
+    // 前回の回転角度を更新
+    setPreviousRotation(finalRotation);
     
     setTimeout(() => {
       setRouletteState(prev => ({
@@ -243,7 +246,6 @@ const RouletteWheel = () => {
             </div>
           </div>
         )}
-
         <div className="relative">
           <div className="absolute -top-6 left-1/2 transform -translate-x-1/2 z-10">
             <div className="bg-white rounded-full p-1 shadow-lg">
